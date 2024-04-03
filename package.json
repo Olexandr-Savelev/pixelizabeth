@@ -5,14 +5,20 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.3",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.23",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-typescript": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.3"
   },
   "devDependencies": {
     "prettier": "^2.8.8"

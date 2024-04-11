@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+}
+.logo > img {
+  height: 60px;
+}
+.nav {
+}
+.nav_list {
+  display: flex;
+}
+.nav_link {
+  transition: color 0.3s linear;
+  font-size: var(--font-lg);
+  padding: var(--space-2) var(--space-4);
+}
+.nav_link:hover {
+  color: var(--color-primary);
+}
+.nav_link__active {
+  background-color: var(--color-text);
+  color: var(--color-primary);
+}

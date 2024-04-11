@@ -1,0 +1,26 @@
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 160px;
+}
+
+.categories {
+}
+
+.category__item {
+}
+
+.categories__wrapper {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.category__heading {
+  text-align: center;
+  font-weight: 300;
+  font-size: var(--space-4);
+  margin: var(--space-4) 0px var(--space-4) 0px;
+  line-height: var(--line-height-dense);
+}

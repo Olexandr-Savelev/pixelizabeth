@@ -1,16 +1,16 @@
 import * as React from "react"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "../Header/header"
+import * as styles from "./layout.module.css"
 
 const Layout = ({ children }: React.PropsWithChildren) => {
   return (
-    <>
-      <Header siteTitle={"Pixelizabeth portfolio"} />
+    <div className={styles.container}>
+      <Header />
       <div>
         <main>{children}</main>
       </div>
-    </>
+    </div>
   )
 }
 

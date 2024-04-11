@@ -1,12 +1,13 @@
 import * as React from "react"
 import { HeadFC } from "gatsby"
-import Layout from "../components/Layout/layout"
-import Seo from "../components/seo"
-import HomePage from "../components/HomePage/homePage"
+import Seo from "../../components/seo"
+import Layout from "../../components/Layout/layout"
 
 const IndexPage = () => (
   <Layout>
-    <HomePage></HomePage>
+    <section>
+      <h3>CONTACT PAGE</h3>
+    </section>
   </Layout>
 )
 

@@ -16,5 +16,11 @@
       "components/*": ["./src/components/*"]
     }
   },
-  "include": ["./src/**/*", "declaration.d.ts"]
+  "include": [
+    "./src/**/*",
+    "./gatsby-node.ts",
+    "./gatsby-config.ts",
+    "./plugins/**/*",
+    "declaration.d.ts"
+  ]
 }

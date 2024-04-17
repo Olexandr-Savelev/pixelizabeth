@@ -1,16 +1,12 @@
 import * as React from "react"
-import { HeadFC } from "gatsby"
+import { HeadFC, navigate } from "gatsby"
 import Seo from "../../components/seo"
-import Layout from "../../components/Layout/layout"
 
-const IndexPage = () => (
-  <Layout>
-    <section>
-      <h3>Portfolio PAGE</h3>
-    </section>
-  </Layout>
-)
+const IndexPage = () => {
+  navigate("/portfolio/pixel_art", { replace: true })
+  return <></>
+}
 
-export const Head: HeadFC = () => <Seo title="Home" />
+export const Head: HeadFC = () => <Seo title="Portfolio" />
 
 export default IndexPage

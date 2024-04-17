@@ -3,33 +3,6 @@ import * as styles from "./homePage.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-interface ICategoryData {
-  routePath: string
-  heading: string
-  image: string
-  alt: string
-}
-const categoryData: ICategoryData[] = [
-  {
-    routePath: "/portfolio/pixel_art",
-    heading: "pixel art",
-    image: "../../images/home/Egypt_s_Great_Pyramids1.jpg",
-    alt: "Pixel egypt pyramid",
-  },
-  {
-    routePath: "/portfolio/vector_art",
-    heading: "vector art",
-    image: "../../images/home/acorn_vector_art_stickers1.jpg",
-    alt: "Pixel acorn",
-  },
-  {
-    routePath: "/portfolio/watercolor",
-    heading: "watercolor",
-    image: "../../images/home/card_miss_you_3.jpg",
-    alt: "Image wwith inscription: 'Miss you come home'",
-  },
-]
-
 const HomePage = () => {
   return (
     <section className={styles.categories}>
@@ -63,7 +36,7 @@ const HomePage = () => {
           <h4 className={styles.category__heading}>watercolor</h4>
           <StaticImage
             src="../../images/home/card_miss_you_3.jpg"
-            alt="Image wwith inscription: 'Miss you come home'"
+            alt="Image wwith inscription: 'Miss you! Come home'"
             placeholder="blurred"
             layout="fixed"
           />

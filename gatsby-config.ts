@@ -8,13 +8,20 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  graphqlTypegen: true,
   siteMetadata: {
-    title: `Pixelizabeth portfolio`,
+    title: `Pixel artist portfolio`,
     description: `Welcome to Pixel Arist, the digital haven of a dedicated pixel art enthusiast! Here, you'll find a vibrant collection of pixel art creations crafted with passion and precision.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.05,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,7 +44,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/Pixelizabeth_logo.svg`, // This path is relative to the root of the site.
+        icon: `src/images/Pixelizabeth_logo.svg`, //This path is relative to the root of the site.
       },
     },
   ],

@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "./header.module.css"
 import { useLocation } from "@reach/router"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   const router = useLocation()
@@ -11,7 +12,13 @@ const Header = () => {
         <div></div>
       ) : (
         <div className={styles.logo}>
-          <img src="/images/Pixelizabeth_logo.svg" alt="logo" />
+          <StaticImage
+            className={styles.logo}
+            src="../../images/Pixelizabeth_logo.png"
+            alt="Pixelizabeth Logo"
+            placeholder="blurred"
+            layout="fixed"
+          />
         </div>
       )}
       <nav className={styles.nav}>

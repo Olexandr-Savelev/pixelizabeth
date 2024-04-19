@@ -7,17 +7,27 @@ import * as styles from "./index.module.css"
 import { transformImageData } from "../../../utils/transformImageData"
 import { ImageData, ImageQueryData } from "../../../types/ImageData"
 
-import Layout from "../../../components/Layout/layout"
+import PortfolioLayout from "../../../components/PortfolioLayout/portfolioLayout"
 import Gallery from "../../../components/Gallery/gallery"
 
 const IndexPage = ({ data }: PageProps<ImageQueryData>) => {
   const images: ImageData[] = transformImageData(data)
 
   return (
-    <Layout>
-      <h3>Pixel Art</h3>
+    <PortfolioLayout>
+      <p
+        className={styles.description}
+        data-sal="slide-up"
+        data-sal-delay="150"
+        data-sal-duration="400"
+        data-sal-easing="ease"
+      >
+        Illustrations, patterns, emotes, icons. I love to do silly dailies, fan
+        art and concepts. I do comissions for portraits and game assets. Most of
+        big projects were under NDA so I can show a preview only, contact me!
+      </p>
       <Gallery images={images} />
-    </Layout>
+    </PortfolioLayout>
   )
 }
 

@@ -17,12 +17,19 @@
   --space-4: 30px;
   --space-5: 54px;
   --space-6: 64px;
+  --space-7: 100px;
   --size-content: 54rem;
 }
 
 .gatsby-image-wrapper {
   height: 100%;
   width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -96,6 +103,7 @@ img {
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
 }
 
 b,

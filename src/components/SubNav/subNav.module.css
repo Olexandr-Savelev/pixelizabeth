@@ -1,0 +1,31 @@
+.subnav__list {
+  display: flex;
+  gap: var(--space-5);
+  margin: var(--space-2) 0px var(--space-2) 0px;
+}
+
+.subnav_link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: var(--font-lg);
+  position: relative;
+  transition: color 0.3s linear;
+}
+
+.subnav_link:hover {
+  color: var(--color-primary);
+}
+
+.subnav_link__active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+  transform-origin: bottom left;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}

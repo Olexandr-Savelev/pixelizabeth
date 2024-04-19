@@ -1,23 +1,20 @@
 .logo {
   position: absolute;
   top: 60px;
-  left: 160px;
+  left: 120px;
 }
 
-.categories {
-  margin-top: var(--space-4);
+.categories__wrapper {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: space-around;
 }
-
 .category__item {
 }
 
 .category__item:hover > .category__heading:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-
-.category__item:hover > .category__heading {
-  color: var(--color-primary);
 }
 
 .category__item > div > picture > img {
@@ -34,16 +31,9 @@
 }
 
 .category__item:hover > div {
-  -webkit-box-shadow: 0px 0px 20px -1px rgb(194, 194, 194);
-  -moz-box-shadow: 0px 0px 20px -1px rgba(194, 194, 194);
-  box-shadow: 0px 0px 20px -1px rgb(194, 194, 194);
-}
-
-.categories__wrapper {
-  margin-top: var(--space-6);
-  display: flex;
-  justify-content: center;
-  gap: var(--space-3);
+  -webkit-box-shadow: 0px 0px 25px -1px rgb(194, 194, 194);
+  -moz-box-shadow: 0px 0px 25px -1px rgba(194, 194, 194);
+  box-shadow: 0px 0px 25px -1px rgb(194, 194, 194);
 }
 
 .category__heading {
@@ -67,5 +57,6 @@
   left: 0;
   background-color: var(--color-primary);
   transform-origin: bottom left;
+  transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

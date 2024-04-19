@@ -1,9 +1,10 @@
 import * as React from "react"
 import { HeadFC } from "gatsby"
-import Layout from "../../../components/Layout/layout"
 import Seo from "../../../components/seo"
 
-const IndexPage = () => <Layout>Watercolor</Layout>
+import PortfolioLayout from "../../../components/PortfolioLayout/portfolioLayout"
+
+const IndexPage = () => <PortfolioLayout>Watercolor</PortfolioLayout>
 
 export const Head: HeadFC = () => <Seo title="Watercolor" />
 

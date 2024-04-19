@@ -4,11 +4,9 @@ export interface ImageData {
   fluid: any
   altText: string
 }
-
 export interface ImageQueryData {
   allFile: AllFile
 }
-
 interface AllFile {
   nodes: Node[]
 }

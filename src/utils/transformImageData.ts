@@ -4,8 +4,12 @@ export const transformImageData = (data: ImageQueryData) => {
   return data.allFile.nodes
     .map(node => {
       const originalName = node.childImageSharp.fluid.originalName
-      const orderNum = +originalName.slice(0, 2)
-      const altText = originalName.slice(3).replace(/_/g, " ")
+      const orderNumMatch = originalName.match(/^\d+/)
+      const orderNum = orderNumMatch ? +orderNumMatch[0] : 0
+      const altText = originalName
+        .replace(/^[\d_]+/, "")
+        .replace(/_/g, " ")
+        .replace(/\.[^.]*$/, "")
 
       return {
         id: node.id,

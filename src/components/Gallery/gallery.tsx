@@ -27,7 +27,7 @@ function Gallery({ images }: GalleryProps) {
               setCurrentIndex(index)
             }}
           >
-            <Img key={id} fluid={fluid} alt={`${altText}`} />
+            <Img key={id} fluid={fluid} alt={altText} />
           </div>
         ))}
       </div>

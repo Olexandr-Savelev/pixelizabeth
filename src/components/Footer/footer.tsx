@@ -21,18 +21,47 @@ function Footer() {
           </div>
           <div className={styles.block}>
             {" "}
-            <a href="">ArtStation</a>
-            <a href="">Twitter</a>
-            <a href="">Itch.io</a>
+            <a href="https://pixelizabeth.artstation.com/" target="_blank">
+              ArtStation
+            </a>
+            <a href="https://twitter.com/pixelizabethh" target="_blank">
+              Twitter
+            </a>
+            <a href="https://pixelizabeth.itch.io/">Itch.io</a>
           </div>
           <div className={styles.block}>
-            <a href="">AdobeStock</a>
-            <a href="">Shutterstock</a>
-            <a href="">VectorStock</a>
+            <a
+              href="https://stock.adobe.com/contributor/210953913/pixelizabeth"
+              target="_blank"
+            >
+              AdobeStock
+            </a>
+            <a
+              href="https://www.shutterstock.com/g/pixelizabeth"
+              target="_blank"
+            >
+              Shutterstock
+            </a>
+            <a
+              href="https://www.vectorstock.com/royalty-free-vectors/vectors-by_Pixelizabeth"
+              target="_blank"
+            >
+              VectorStock
+            </a>
           </div>
           <div className={styles.block}>
-            <a href="">DepositPhotos</a>
-            <a href="">Dreamstime</a>
+            <a
+              href="https://depositphotos.com/portfolio-13022366.html?content=photo"
+              target="_blank"
+            >
+              DepositPhotos
+            </a>
+            <a
+              href="https://www.dreamstime.com/elimaximova_info"
+              target="_blank"
+            >
+              Dreamstime
+            </a>
           </div>
         </div>
       </div>

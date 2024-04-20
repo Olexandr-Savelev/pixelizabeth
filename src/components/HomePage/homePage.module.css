@@ -60,3 +60,7 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
+
+.category__image_wrapper {
+  position: relative;
+}

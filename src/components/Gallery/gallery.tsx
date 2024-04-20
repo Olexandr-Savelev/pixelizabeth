@@ -9,13 +9,30 @@ import { ImageData } from "../../types/ImageData"
 
 interface GalleryProps {
   images: ImageData[]
+  location: "pixel_art" | "vector_art" | "watercolor"
 }
 
-function Gallery({ images }: GalleryProps) {
+function Gallery({ images, location }: GalleryProps) {
+  let galleryStyles
+
+  switch (location) {
+    case "pixel_art":
+      galleryStyles = styles.pixel_art
+      break
+    case "vector_art":
+      galleryStyles = styles.vector_art
+      break
+    case "watercolor":
+      galleryStyles = styles.watercolor
+      break
+    default:
+      break
+  }
+
   const [currentImageIndex, setCurrentIndex] = useState<number | null>(null)
   return (
     <>
-      <div className={styles.gallery}>
+      <div className={galleryStyles}>
         {images.map(({ id, fluid, altText }, index) => (
           <div
             data-sal="slide-up"

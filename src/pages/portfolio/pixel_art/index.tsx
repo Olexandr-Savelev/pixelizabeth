@@ -2,31 +2,25 @@ import * as React from "react"
 import { HeadFC, PageProps, graphql } from "gatsby"
 import Seo from "../../../components/seo"
 
-import * as styles from "./index.module.css"
-
 import { transformImageData } from "../../../utils/transformImageData"
 import { ImageData, ImageQueryData } from "../../../types/ImageData"
 
 import PortfolioLayout from "../../../components/PortfolioLayout/portfolioLayout"
 import Gallery from "../../../components/Gallery/gallery"
+import PageDescription from "../../../components/UI/PageDescription/pageDescription"
 
 const IndexPage = ({ data }: PageProps<ImageQueryData>) => {
   const images: ImageData[] = transformImageData(data)
 
   return (
     <PortfolioLayout>
-      <p
-        className={styles.description}
-        data-sal="slide-up"
-        data-sal-delay="150"
-        data-sal-duration="400"
-        data-sal-easing="ease"
-      >
-        Illustrations, patterns, emotes, icons. I love to do silly dailies, fan
-        art and concepts. I do comissions for portraits and game assets. Most of
-        big projects were under NDA so I can show a preview only, contact me!
-      </p>
-      <Gallery images={images} />
+      <PageDescription
+        text={
+          "Illustrations, patterns, emotes, icons. I love to do silly dailies, fan art and concepts. I do comissions for portraits and game assets. Most of big projects were under NDA so I can show a preview only, contact me!"
+        }
+      />
+
+      <Gallery images={images} location="pixel_art" />
     </PortfolioLayout>
   )
 }

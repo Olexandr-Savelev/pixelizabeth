@@ -19,7 +19,6 @@ const IndexPage = ({ data }: PageProps<ImageQueryData>) => {
           "Seamless patterns and illustrations, stickers and prints. Could be used anywhere as backgrounds, wrappings, textures, wallpapers."
         }
       />
-
       <Gallery images={images} location="vector_art" />
     </PortfolioLayout>
   )
@@ -47,6 +46,6 @@ export const query = graphql`
   }
 `
 
-export const Head: HeadFC = () => <Seo title="Pixel Art" />
+export const Head: HeadFC = () => <Seo title="Vector Art" />
 
 export default IndexPage

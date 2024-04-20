@@ -4,6 +4,7 @@
   --color-primary: #66bb6a;
   --color-primary-bg: #1f1f1f;
   --color-secondary-bg: #000000;
+  --font-heading-lg: 40px;
   --font-lg: 24px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -18,7 +19,6 @@
   --space-5: 54px;
   --space-6: 64px;
   --space-7: 100px;
-  --size-content: 54rem;
 }
 
 .gatsby-image-wrapper {
@@ -85,6 +85,10 @@ h1 {
 }
 h1 > b {
   color: var(--color-primary);
+}
+p {
+  padding: 0;
+  margin: 0;
 }
 img {
   border-style: none;

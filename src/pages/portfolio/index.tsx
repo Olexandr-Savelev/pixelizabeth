@@ -7,6 +7,6 @@ const IndexPage = () => {
   return <></>
 }
 
-export const Head: HeadFC = () => <Seo title="Portfolio" />
+export const Head: HeadFC = () => <Seo />
 
 export default IndexPage

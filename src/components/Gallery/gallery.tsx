@@ -35,14 +35,15 @@ function Gallery({ images, location }: GalleryProps) {
       <div className={galleryStyles}>
         {images.map(({ id, fluid, altText }, index) => (
           <div
-            data-sal="slide-up"
-            data-sal-delay="200"
-            data-sal-duration="400"
-            data-sal-easing="ease"
+            className={styles.gallery__item}
             key={id}
             onClick={() => {
               setCurrentIndex(index)
             }}
+            data-sal="slide-up"
+            data-sal-delay="200"
+            data-sal-duration="300"
+            data-sal-easing="ease"
           >
             <Img key={id} fluid={fluid} alt={altText} />
           </div>

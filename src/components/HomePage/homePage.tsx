@@ -9,7 +9,7 @@ const HomePage = () => {
       <div
         data-sal="slide-up"
         data-sal-delay="100"
-        data-sal-duration="400"
+        data-sal-duration="200"
         data-sal-easing="ease"
         className={styles.logo}
       >
@@ -24,8 +24,8 @@ const HomePage = () => {
       <div
         className={styles.categories__wrapper}
         data-sal="slide-up"
-        data-sal-delay="200"
-        data-sal-duration="400"
+        data-sal-delay="100"
+        data-sal-duration="300"
         data-sal-easing="ease"
       >
         <Link to="/portfolio/pixel_art" className={styles.category__item}>

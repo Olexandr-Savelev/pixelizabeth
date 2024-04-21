@@ -7,7 +7,7 @@ const pageDescription: React.FC<{ text: string }> = ({ text }) => {
       className={styles.description__text}
       data-sal="slide-up"
       data-sal-delay="150"
-      data-sal-duration="400"
+      data-sal-duration="300"
       data-sal-easing="ease"
     >
       {text}

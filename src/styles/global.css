@@ -6,7 +6,7 @@
   --color-secondary-bg: #000000;
   --font-heading-lg: 40px;
   --font-lg: 24px;
-  --font-md: 16px;
+  --font-md: 20px;
   --font-sm: 14px;
   --font-sx: 12px;
   --line-height-loose: 1.75;
@@ -69,7 +69,6 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
-  text-decoration: none;
 }
 b,
 strong {

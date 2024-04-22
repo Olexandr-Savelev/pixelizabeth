@@ -4,8 +4,16 @@ import * as styles from "./header.module.css"
 import { useLocation } from "@reach/router"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = () => {
+import Burger from "../UI/Burger/burger"
+
+interface HeaderProps {
+  isOpen: boolean
+  setIsOpen: (value: boolean) => void
+}
+
+const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
   const router = useLocation()
+
   return (
     <header className={styles.header}>
       {router.pathname === "/" ? (
@@ -53,6 +61,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   )
 }

@@ -52,8 +52,8 @@ function Gallery({ images, location }: GalleryProps) {
 
       {currentImageIndex !== null && (
         <Lightbox
-          mainSrc={images[currentImageIndex].publicURL!}
-          nextSrc={images[(currentImageIndex + 1) % images.length].publicURL!}
+          mainSrc={images[currentImageIndex].publicURL}
+          nextSrc={images[(currentImageIndex + 1) % images.length].publicURL}
           prevSrc={
             images[(currentImageIndex + images.length - 1) % images.length]
               .publicURL!

@@ -27,7 +27,9 @@ function Footer() {
             <a href="https://twitter.com/pixelizabethh" target="_blank">
               Twitter
             </a>
-            <a href="https://pixelizabeth.itch.io/">Itch.io</a>
+            <a href="https://pixelizabeth.itch.io/" target="_blank">
+              Itch.io
+            </a>
           </div>
           <div className={styles.block}>
             <a

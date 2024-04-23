@@ -1,11 +1,14 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Img from "gatsby-image"
-import Lightbox from "react-image-lightbox"
-import "react-image-lightbox/style.css"
 
 import * as styles from "./gallery.module.css"
 import { ImageData } from "../../types/ImageData"
+
+import Lightbox from "yet-another-react-lightbox"
+import "yet-another-react-lightbox/styles.css"
+
+import Loader from "../../images/bouncing-squares.inline.svg"
 
 interface GalleryProps {
   images: ImageData[]
@@ -13,6 +16,12 @@ interface GalleryProps {
 }
 
 function Gallery({ images, location }: GalleryProps) {
+  const lightboxImages = useMemo(() => {
+    return images.map(image => ({
+      src: image.publicURL,
+    }))
+  }, [location])
+
   let galleryStyles
 
   switch (location) {
@@ -29,7 +38,7 @@ function Gallery({ images, location }: GalleryProps) {
       break
   }
 
-  const [currentImageIndex, setCurrentIndex] = useState<number | null>(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1)
   return (
     <>
       <div className={galleryStyles}>
@@ -38,7 +47,7 @@ function Gallery({ images, location }: GalleryProps) {
             className={styles.gallery__item}
             key={id}
             onClick={() => {
-              setCurrentIndex(index)
+              setCurrentImageIndex(index)
             }}
             data-sal="slide-up"
             data-sal-delay="200"
@@ -49,28 +58,20 @@ function Gallery({ images, location }: GalleryProps) {
           </div>
         ))}
       </div>
-
-      {currentImageIndex !== null && (
-        <Lightbox
-          mainSrc={images[currentImageIndex].publicURL}
-          nextSrc={images[(currentImageIndex + 1) % images.length].publicURL}
-          prevSrc={
-            images[(currentImageIndex + images.length - 1) % images.length]
-              .publicURL!
-          }
-          onCloseRequest={() => {
-            setCurrentIndex(null)
-          }}
-          onMovePrevRequest={() =>
-            setCurrentIndex(
-              (currentImageIndex + images.length - 1) % images.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setCurrentIndex((currentImageIndex + 1) % images.length)
-          }
-        />
-      )}
+      <Lightbox
+        slides={lightboxImages}
+        open={currentImageIndex >= 0}
+        index={currentImageIndex}
+        close={() => setCurrentImageIndex(-1)}
+        render={{
+          iconLoading: () => (
+            <div style={{ width: "150px", padding: 20 }}>
+              <Loader />
+            </div>
+          ),
+        }}
+        noScroll={{ disabled: true }}
+      />
     </>
   )
 }

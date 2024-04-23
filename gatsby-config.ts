@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        threshold: 0.005,
+        threshold: 0.001,
       },
     },
     `gatsby-plugin-image`,
@@ -30,7 +30,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

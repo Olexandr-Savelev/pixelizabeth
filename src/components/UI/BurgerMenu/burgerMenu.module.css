@@ -1,5 +1,4 @@
 .menu {
-  /* display: none; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,14 +11,12 @@
   z-index: 90;
   flex-direction: column;
   gap: var(--space-2);
-  overflow-y: hidden;
   transition: transform 0.5s ease;
   transform: translateY(-100%);
   scrollbar-width: none;
 }
 
 .menu.open {
-  display: flex;
   transform: translateY(0);
 }
 

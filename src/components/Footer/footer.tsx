@@ -68,8 +68,9 @@ function Footer() {
       <span className={styles.line}></span>
       <div className="container">
         <p>
-          &copy; {new Date().getFullYear()} Your Company Name. All rights
-          reserved. Designed with ❤️ by Your Name.
+          Yelyzaveta Shevchenko, pixel and vector artist. All rights reserved.
+          Designed by Pixelizabeth, website and support by Olexander Saveliev.{" "}
+          {new Date().getFullYear()}
         </p>
       </div>
     </footer>

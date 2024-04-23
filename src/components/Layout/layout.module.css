@@ -4,9 +4,8 @@
   min-height: 100vh;
 }
 
-.wrapper.fixed {
-  position: fixed;
-  top: 0;
+.wrapper.unscrollable {
+  height: 100px;
   overflow-y: hidden;
 }
 

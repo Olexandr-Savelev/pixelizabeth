@@ -12,7 +12,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <div
       className={cn(styles.wrapper, {
-        [styles.fixed]: isMenuOpen,
+        [styles.unscrollable]: isMenuOpen,
       })}
     >
       <div className={styles.content + " container"}>

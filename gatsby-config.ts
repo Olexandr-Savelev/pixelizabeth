@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        threshold: 0.01,
+        threshold: 0.005,
       },
     },
     `gatsby-plugin-image`,
@@ -44,7 +44,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/Pixelizabeth_logo.svg`, //This path is relative to the root of the site.
+        icon: `src/images/icon.png`, //This path is relative to the root of the site.
       },
     },
   ],

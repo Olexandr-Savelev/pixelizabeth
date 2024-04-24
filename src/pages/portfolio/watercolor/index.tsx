@@ -22,6 +22,28 @@ const IndexPage = ({ data }: PageProps<ImageQueryData>) => {
   )
 }
 
+// export const query = graphql`
+//   query IndexPage {
+//     allFile(
+//       filter: {
+//         sourceInstanceName: { eq: "images" }
+//         relativeDirectory: { eq: "watercolor" }
+//       }
+//     ) {
+//       nodes {
+//         id
+//         publicURL
+//         childImageSharp {
+//           fluid {
+//             originalName
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
   query IndexPage {
     allFile(
@@ -34,9 +56,9 @@ export const query = graphql`
         id
         publicURL
         childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
           fluid {
             originalName
-            ...GatsbyImageSharpFluid
           }
         }
       }

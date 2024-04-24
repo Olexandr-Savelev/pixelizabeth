@@ -36,9 +36,9 @@ export const query = graphql`
         id
         publicURL
         childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
           fluid {
             originalName
-            ...GatsbyImageSharpFluid
           }
         }
       }

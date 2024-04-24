@@ -1,28 +1,36 @@
+import { IGatsbyImageData } from "gatsby-plugin-image"
 export interface ImageData {
   id: string
   publicURL: string
-  fluid: any
+  gatbyImageData: IGatsbyImageData
+  orderNum: number
   altText: string
 }
+
 export interface ImageQueryData {
   allFile: AllFile
 }
+
 interface AllFile {
   nodes: Node[]
 }
+
 interface Node {
   id: string
   publicURL: string
   childImageSharp: ChildImageSharp
 }
+
 interface ChildImageSharp {
+  gatsbyImageData: IGatsbyImageData
+  original: Original
   fluid: Fluid
 }
+
 interface Fluid {
-  sizes: string
   originalName: string
-  base64: string
-  aspectRatio: number
+}
+
+interface Original {
   src: string
-  srcSet: string
 }

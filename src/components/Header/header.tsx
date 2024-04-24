@@ -19,15 +19,12 @@ const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
       {router.pathname === "/" ? (
         <div></div>
       ) : (
-        <div className={styles.logo}>
-          <StaticImage
-            className={styles.logo}
-            src="../../images/Pixelizabeth_logo.png"
-            alt="Pixelizabeth Logo"
-            placeholder="blurred"
-            layout="fixed"
-          />
-        </div>
+        <StaticImage
+          src="../../images/Pixelizabeth_logo.png"
+          alt="Pixelizabeth Logo"
+          placeholder="blurred"
+          layout="fixed"
+        />
       )}
       <nav className={styles.nav}>
         <ul className={styles.nav_list}>

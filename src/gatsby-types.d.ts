@@ -2382,7 +2382,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type IndexPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type IndexPageQuery = { readonly allFile: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly publicURL: string | null, readonly childImageSharp: { readonly fluid: { readonly originalName: string | null, readonly base64: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly sizes: string } | null } | null }> } };
+type IndexPageQuery = { readonly allFile: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly publicURL: string | null, readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly fluid: { readonly originalName: string | null } | null } | null }> } };
 
 
 }

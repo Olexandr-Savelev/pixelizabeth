@@ -49,6 +49,7 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
+  scrollbar-color: var(--color-text) var(--color-primary-bg);
 }
 body {
   -moz-osx-font-smoothing: grayscale;

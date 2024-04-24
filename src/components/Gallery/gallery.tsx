@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState, useMemo } from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as styles from "./gallery.module.css"
 import { ImageData } from "../../types/ImageData"
@@ -16,6 +16,8 @@ interface GalleryProps {
 }
 
 function Gallery({ images, location }: GalleryProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1)
+
   const lightboxImages = useMemo(() => {
     return images.map(image => ({
       src: image.publicURL,
@@ -38,11 +40,10 @@ function Gallery({ images, location }: GalleryProps) {
       break
   }
 
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1)
   return (
     <>
       <div className={galleryStyles}>
-        {images.map(({ id, fluid, altText }, index) => (
+        {images.map(({ id, altText, gatbyImageData }, index) => (
           <div
             className={styles.gallery__item}
             key={id}
@@ -54,7 +55,7 @@ function Gallery({ images, location }: GalleryProps) {
             data-sal-duration="300"
             data-sal-easing="ease"
           >
-            <Img key={id} fluid={fluid} alt={altText} />
+            <GatsbyImage image={gatbyImageData} alt={altText} />
           </div>
         ))}
       </div>

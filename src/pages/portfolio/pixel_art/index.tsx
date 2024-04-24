@@ -19,7 +19,6 @@ const IndexPage = ({ data }: PageProps<ImageQueryData>) => {
           "Illustrations, patterns, emotes, icons. I love to do silly dailies, fan art and concepts. I do comissions for portraits and game assets. Most of big projects were under NDA so I can show a preview only, contact me!"
         }
       />
-
       <Gallery images={images} location="pixel_art" />
     </PortfolioLayout>
   )
@@ -37,9 +36,9 @@ export const query = graphql`
         id
         publicURL
         childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
           fluid {
             originalName
-            ...GatsbyImageSharpFluid
           }
         }
       }

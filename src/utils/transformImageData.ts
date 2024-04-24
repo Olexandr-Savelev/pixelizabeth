@@ -14,7 +14,7 @@ export const transformImageData = (data: ImageQueryData) => {
       return {
         id: node.id,
         publicURL: node.publicURL,
-        fluid: node.childImageSharp?.fluid,
+        gatbyImageData: node.childImageSharp.gatsbyImageData,
         orderNum,
         altText,
       }

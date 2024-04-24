@@ -1,7 +1,7 @@
 .subnav__list {
   display: flex;
-  gap: var(--space-5);
-  margin: var(--space-2) 0px var(--space-2) 0px;
+  justify-content: space-between;
+  margin: var(--space-3) 0px var(--space-3) 0px;
 }
 
 .subnav_link {
@@ -10,10 +10,6 @@
   font-size: var(--font-lg);
   position: relative;
   transition: color 0.3s linear;
-}
-
-.subnav_link:hover {
-  color: var(--color-primary);
 }
 
 .subnav_link__active::after {
@@ -28,4 +24,20 @@
   transform-origin: bottom left;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+}
+
+@media (min-width: 768px) {
+  .subnav__list {
+    gap: var(--space-5);
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .subnav__list {
+    margin: var(--space-2) 0px var(--space-2) 0px;
+  }
+  .subnav_link:hover {
+    color: var(--color-primary);
+  }
 }

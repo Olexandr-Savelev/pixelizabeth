@@ -12,11 +12,11 @@ interface HeaderProps {
 }
 
 const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
-  const router = useLocation()
+  const location = useLocation()
 
   return (
     <header className={styles.header}>
-      {router.pathname === "/" ? (
+      {location.pathname === "/" ? (
         <div></div>
       ) : (
         <StaticImage

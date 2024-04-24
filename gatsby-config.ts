@@ -15,7 +15,7 @@ module.exports = {
   graphqlTypegen: true,
   siteMetadata: {
     title: `Pixelizabeth`,
-    description: `Welcome to Pixel Arist, the digital haven of a dedicated pixel art enthusiast! Here, you'll find a vibrant collection of pixel art creations crafted with passion and precision.`,
+    description: `Welcome to Pixelizabeth's portfolio! Here you'll find a previews of illustrations, concepts and sketches in watercolor, vector and pixel art. All images and assets were created with passion and thoughtfulness.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },

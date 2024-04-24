@@ -8,6 +8,10 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/pixelizabeth",
+  flags: {
+    DEV_SSR: true,
+  },
   graphqlTypegen: true,
   siteMetadata: {
     title: `Pixelizabeth`,

@@ -3,8 +3,8 @@ import { HeadFC, navigate } from "gatsby"
 import Seo from "../../components/seo"
 
 const IndexPage = () => {
-  navigate("/portfolio/pixel_art", { replace: true })
-  return <></>
+  // navigate("/portfolio/pixel_art", { replace: true })
+  return <div></div>
 }
 
 export const Head: HeadFC = () => <Seo />

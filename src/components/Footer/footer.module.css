@@ -5,6 +5,20 @@
   padding-bottom: var(--space-4);
 }
 
+.logo {
+  font-family: "SquarePeg";
+  text-align: center;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: var(--line-height-dense);
+}
+
+.block .logo:hover {
+  cursor: pointer;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 .footer_content {
   display: flex;
   gap: var(--space-3);
@@ -44,7 +58,14 @@
   margin-bottom: var(--space-4);
 }
 
+.footer__text {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
+  .logo {
+    text-align: left;
+  }
   .footer {
     margin-top: var(--space-7);
     padding-top: var(--space-7);

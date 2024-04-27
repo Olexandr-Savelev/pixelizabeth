@@ -19,12 +19,13 @@ const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
       {location.pathname === "/" ? (
         <div></div>
       ) : (
-        <StaticImage
-          src="../../images/Pixelizabeth_logo.png"
-          alt="Pixelizabeth Logo"
-          placeholder="blurred"
-          layout="fixed"
-        />
+        <Link
+          className={styles.logo}
+          activeClassName={styles.nav_link__active}
+          to="/"
+        >
+          Pixelizabeth
+        </Link>
       )}
       <nav className={styles.nav}>
         <ul className={styles.nav_list}>

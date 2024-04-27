@@ -15,6 +15,7 @@ const IndexPage = () => (
           data-sal-delay="100"
           data-sal-duration="200"
           data-sal-easing="ease"
+          className={styles.about__image_wrapper}
         >
           <StaticImage
             src="../../images/girls_with_bubblegum.png"

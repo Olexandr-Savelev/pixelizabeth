@@ -8,21 +8,26 @@
 //  * @type {import('gatsby').GatsbySSR['onRenderBody']}
 //  */
 
-// exports.onRenderBody = ({ setHtmlAttributes }) => {
-//   setHtmlAttributes({ lang: `en` })
-// }
-
 import * as React from "react"
 
-export const onRenderBody = ({ setHeadComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
   setHeadComponents([
     <link
+      key="squarePegFont"
+      rel="preload"
+      href="/fonts/SquarePeg-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />,
+    <link
+      key="workSansFont"
       rel="preload"
       href="/fonts/WorkSans[wght].woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="workSansFont"
     />,
-  ])
+  ]),
+    setHtmlAttributes({ lang: `en` })
 }

@@ -5,11 +5,18 @@
   padding-top: var(--space-2);
 }
 
+.logo {
+  font-family: "SquarePeg";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: var(--line-height-dense);
+}
+
 .nav {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .header {
     padding-top: var(--space-3);
   }

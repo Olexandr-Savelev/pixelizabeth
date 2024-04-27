@@ -13,10 +13,10 @@ export const transformImageData = (data: ImageQueryData) => {
 
       return {
         id: node.id,
-        publicURL: node.publicURL,
         gatbyImageData: node.childImageSharp.gatsbyImageData,
         orderNum,
         altText,
+        src: node.publicURL,
       }
     })
     .sort((a, b) => a.orderNum - b.orderNum)

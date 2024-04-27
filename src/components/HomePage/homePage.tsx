@@ -13,12 +13,7 @@ const HomePage = () => {
         data-sal-easing="ease"
         className={styles.logo}
       >
-        <StaticImage
-          src="../../images/Big_pixelizabeth_logo.png"
-          alt="Pixelizabeth Logo"
-          placeholder="blurred"
-          layout="fixed"
-        />
+        <h1>Pixelizabeth</h1>
       </div>
 
       <div
@@ -41,7 +36,7 @@ const HomePage = () => {
         <Link to="/portfolio/vector_art" className={styles.category__item}>
           <h4 className={styles.category__heading}>vector art</h4>
           <StaticImage
-            src="../../images/home/acorn_vector_art_illustration.png"
+            src="../../images/home/acorn_vector_art_illustration.jpg"
             alt="Acorn greets"
             placeholder="blurred"
             height={576}

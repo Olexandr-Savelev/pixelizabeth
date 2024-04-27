@@ -1,10 +1,10 @@
 import { IGatsbyImageData } from "gatsby-plugin-image"
 export interface ImageData {
   id: string
-  publicURL: string
   gatbyImageData: IGatsbyImageData
   orderNum: number
   altText: string
+  src: string
 }
 
 export interface ImageQueryData {

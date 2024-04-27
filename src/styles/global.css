@@ -28,8 +28,14 @@
 
 .container {
   max-width: 1440px;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .yarl__root {
@@ -43,6 +49,15 @@
   font-style: normal;
   font-named-instance: "Regular";
   src: url(/fonts/WorkSans[wght].woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "SquarePeg";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/SquarePeg-Regular.woff2) format("woff2");
 }
 
 html {
@@ -64,6 +79,16 @@ body {
 }
 main {
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
 a {
   background-color: transparent;
   color: var(--color-text);
@@ -80,16 +105,7 @@ strong {
   font-weight: inherit;
   font-weight: bolder;
 }
-h1 {
-  margin: 0;
-  margin-bottom: 3rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
-}
-h1 > b {
-  color: var(--color-primary);
-}
+
 p {
   padding: 0;
   margin: 0;

@@ -2,6 +2,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "./footer.module.css"
 
 import React from "react"
+import { Link } from "gatsby"
 
 function Footer() {
   return (
@@ -9,12 +10,13 @@ function Footer() {
       <div className="container">
         <div className={styles.footer_content}>
           <div className={styles.block}>
-            <StaticImage
-              src="../../images/Pixelizabeth_logo.png"
-              alt="Pixelizabeth Logo"
-              placeholder="blurred"
-              layout="fixed"
-            />
+            <Link
+              className={styles.logo}
+              activeClassName={styles.nav_link__active}
+              to="/"
+            >
+              Pixelizabeth
+            </Link>
             <a className={styles.mail} href="mailto:elimaximova@gmail.com">
               elimaximova@gmail.com
             </a>
@@ -69,9 +71,9 @@ function Footer() {
       </div>
       <span className={styles.line}></span>
       <div className="container">
-        <p>
+        <p className={styles.footer__text}>
           Yelyzaveta Shevchenko, pixel and vector artist. All rights reserved.
-          Designed by Pixelizabeth, website and support by Olexander Saveliev.{" "}
+          Designed by Pixelizabeth, website and support by Oleksandr Saveliev.{" "}
           {new Date().getFullYear()}
         </p>
       </div>

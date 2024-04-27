@@ -53,7 +53,23 @@
   color: var(--color-text);
 }
 
-@media (min-width: 768px) {
+.about__image_wrapper > div {
+  max-width: 330px;
+}
+
+@media (min-width: 500px) {
+  .about__image_wrapper > div {
+    max-width: 430px;
+  }
+}
+
+@media (min-width: 550px) {
+  .about__image_wrapper {
+    max-width: none;
+  }
+}
+
+@media (min-width: 767px) {
   .about {
     display: flex;
     justify-content: center;

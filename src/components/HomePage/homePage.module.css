@@ -1,17 +1,26 @@
 .logo {
   position: relative;
   margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
 }
 
-.logo > div {
-  margin: 0 auto;
+.logo > h1 {
+  font-family: "SquarePeg";
+  font-weight: 400;
+  text-align: center;
+  font-size: 100px;
+  line-height: var(--line-height-dense);
 }
 
 .categories__wrapper {
-  margin-top: var(--space-3);
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.category__item::not(:last-child) {
+  margin-bottom: var(--space-3);
 }
 
 .category__item > div > picture > img {
@@ -21,6 +30,7 @@
 
 .category__item > div {
   transition: box-shadow 0.3s ease;
+  max-width: 330px;
 }
 
 .category__heading {
@@ -29,7 +39,7 @@
   text-align: center;
   font-weight: 300;
   font-size: var(--space-4);
-  margin-bottom: var(--space-3);
+  margin: 0px 0px var(--space-3) 0px;
   line-height: var(--line-height-dense);
   transition: color 0.3s ease;
 }
@@ -52,15 +62,34 @@
   position: relative;
 }
 
+@media (min-width: 500px) {
+  .category__item > div {
+    max-width: none;
+  }
+  .logo > div img {
+    max-width: none;
+  }
+  .logo > h1 {
+    font-size: 130px;
+  }
+  .categories__wrapper {
+    flex-wrap: wrap;
+    margin-top: var(--space-3);
+    gap: 0;
+    justify-content: space-around;
+  }
+}
+
 @media (min-width: 992px) {
   .logo {
     position: absolute;
-    top: 60px;
-    left: 120px;
+    top: 40px;
+    left: 100px;
+    margin: 0;
   }
 
   .categories__wrapper {
-    margin-top: var(--space-6);
+    margin-top: var(--space-7);
   }
 
   .category__item:hover > div > picture > img {

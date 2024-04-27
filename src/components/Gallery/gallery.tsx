@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useMemo } from "react"
+import { useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import * as styles from "./gallery.module.css"
@@ -17,12 +17,6 @@ interface GalleryProps {
 
 function Gallery({ images, location }: GalleryProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1)
-
-  const lightboxImages = useMemo(() => {
-    return images.map(image => ({
-      src: image.publicURL,
-    }))
-  }, [location])
 
   let galleryStyles
 
@@ -60,7 +54,7 @@ function Gallery({ images, location }: GalleryProps) {
         ))}
       </div>
       <Lightbox
-        slides={lightboxImages}
+        slides={images}
         open={currentImageIndex >= 0}
         index={currentImageIndex}
         close={() => setCurrentImageIndex(-1)}

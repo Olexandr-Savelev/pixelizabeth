@@ -54,7 +54,7 @@
 }
 
 .about__image_wrapper > div {
-  max-width: 330px;
+  max-width: 350px;
 }
 
 @media (min-width: 500px) {

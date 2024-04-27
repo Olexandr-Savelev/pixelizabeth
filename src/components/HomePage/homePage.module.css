@@ -30,7 +30,7 @@
 
 .category__item > div {
   transition: box-shadow 0.3s ease;
-  max-width: 330px;
+  max-width: 350px;
 }
 
 .category__heading {

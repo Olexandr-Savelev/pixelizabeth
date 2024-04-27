@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image"
 import * as styles from "./footer.module.css"
 
 import React from "react"
@@ -10,11 +9,7 @@ function Footer() {
       <div className="container">
         <div className={styles.footer_content}>
           <div className={styles.block}>
-            <Link
-              className={styles.logo}
-              activeClassName={styles.nav_link__active}
-              to="/"
-            >
+            <Link className={styles.logo} to="/">
               Pixelizabeth
             </Link>
             <a className={styles.mail} href="mailto:elimaximova@gmail.com">

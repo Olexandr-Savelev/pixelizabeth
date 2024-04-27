@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "./header.module.css"
 import { useLocation } from "@reach/router"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Burger from "../UI/Burger/burger"
 
@@ -19,11 +18,7 @@ const Header = ({ isOpen, setIsOpen }: HeaderProps) => {
       {location.pathname === "/" ? (
         <div></div>
       ) : (
-        <Link
-          className={styles.logo}
-          activeClassName={styles.nav_link__active}
-          to="/"
-        >
+        <Link className={styles.logo} to="/">
           Pixelizabeth
         </Link>
       )}
